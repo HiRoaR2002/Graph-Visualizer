@@ -2,9 +2,9 @@
 
 ## Description
 
-Build a prototype system to visualize relationships between user accounts using 
-transaction data and shared attributes in a graph database environment. The 
-system should use AWS Neptune or a similar graph database (e.g., Neo4j) for 
+Build a prototype system to visualize relationships between user accounts using
+transaction data and shared attributes in a graph database environment. The
+system should use AWS Neptune or a similar graph database (e.g., Neo4j) for
 graph storage and querying, inspired by Flagright's FRAML API.
 
 ## Docker Setup
@@ -25,9 +25,9 @@ To get the project running locally using Docker, follow these steps:
 
 This repository is already set up to be containerized using Docker. Here’s how it’s structured:
 
-*   `docker-compose.yml`: This file at the root of the project orchestrates the different services (frontend, backend, database).
-*   `backend/Dockerfile`: Defines the environment and steps to build the Node.js backend service.
-*   `frontend/Dockerfile`: Defines the environment and steps to build the React frontend service.
+- `docker-compose.yml`: This file at the root of the project orchestrates the different services (frontend, backend, database).
+- `backend/Dockerfile`: Defines the environment and steps to build the Node.js backend service.
+- `frontend/Dockerfile`: Defines the environment and steps to build the React frontend service.
 
 To containerize this repository, you can run the build command:
 
@@ -64,3 +64,26 @@ To populate the database with test data, you can run the data generation scripts
     # For a smaller test dataset
     node src/scripts/generateSmallTestData.js
     ```
+
+    Final Step – Accessing the Frontend
+
+After building the containers, generating the data, and running:
+
+docker-compose up
+
+3. **You can access the frontend application at:**
+
+`bash http://localhost:3000`
+
+Application Snapshots
+Graph View
+
+![Graph View](assets/graph-view.png)
+
+Node Details Panel
+
+![Node View](assets/node-view.png)
+
+3D View
+
+![alt text](image.png)
