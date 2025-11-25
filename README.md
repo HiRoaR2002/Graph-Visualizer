@@ -73,7 +73,9 @@ docker-compose up
 
 3. **You can access the frontend application at:**
 
-`bash http://localhost:3000`
+```bash
+http://localhost:3000
+```
 
 Application Snapshots
 Graph View
